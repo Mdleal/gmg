@@ -1,7 +1,7 @@
 # Build Phase
 FROM node:12.4 as builder
 WORKDIR /app
-RUN mkdir gpg-app 
+RUN mkdir gmg-app 
 COPY ./gmg-app ./gmg-app
 COPY ./gmg-client ./gmg-client
 COPY ./gmg-server ./gmg-server
