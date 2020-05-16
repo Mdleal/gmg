@@ -1,11 +1,10 @@
 # Build Phase
 FROM node:12.4 as builder
 WORKDIR /app
-RUN mkdir gmg-app 
-COPY ./gmg-app ./gmg-app
-COPY ./gmg-client ./gmg-client
-COPY ./gmg-server ./gmg-server
-COPY ./build.sh .
+COPY /src/gmg-app ./gmg-app
+COPY /src/gmg-client ./gmg-client
+COPY /src/gmg-server ./gmg-server
+COPY /src/build.sh .
 RUN apt-get update && \
     apt-get install dos2unix && \
     dos2unix ./build.sh && \
