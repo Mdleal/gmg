@@ -3,11 +3,11 @@ FROM node:lts-stretch as builder
 RUN apt-get update
 
 WORKDIR /app
-COPY /src/gmg-app ./gmg-app
-COPY /src/gmg-client ./gmg-client
-COPY /src/gmg-server ./gmg-server
-COPY /src/build.sh .
-RUN /bin/bash /src/build.sh
+COPY ./gmg-app ./gmg-app
+COPY ./gmg-client ./gmg-client
+COPY ./gmg-server ./gmg-server
+COPY ./build.sh .
+RUN /bin/bash ./build.sh
 
 # Run Phase
 FROM node:lts-stretch as runtime
