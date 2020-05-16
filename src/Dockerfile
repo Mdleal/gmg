@@ -16,4 +16,3 @@ COPY --from=builder /app/gmg-server /app/gmg-server
 WORKDIR /app/gmg-server
 CMD ["npm", "run", "start:release"]
 EXPOSE 80:80
-
