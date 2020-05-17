@@ -11,7 +11,7 @@ RUN apt-get update && \
     /bin/bash ./build.sh
 
 # Run Phase
-FROM node:8.9.1 as runtime
+FROM node:12.4 as runtime
 COPY --from=builder /app/gmg-client /app/gmg-client
 COPY --from=builder /app/gmg-server /app/gmg-server
 COPY --from=builder /app/gmg-app/build /app/gmg-server/public
