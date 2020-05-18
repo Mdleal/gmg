@@ -4,9 +4,9 @@ RUN apt-get update
 
 RUN mkdir /app
 WORKDIR /app
-COPY /srv/gmg-app ./gmg-app
-COPY /srv/gmg-client ./gmg-client
-COPY /srv/gmg-server ./gmg-server
+COPY /srv/gmg-app /app/gmg-app
+COPY /srv/gmg-client /app/gmg-client
+COPY /srv/gmg-server /app/gmg-server
 COPY /srv/build.sh .
 RUN /bin/bash ./build.sh
 
