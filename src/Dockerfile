@@ -2,6 +2,7 @@
 FROM node:lts-stretch as builder
 RUN apt-get update
 
+RUN mkdir /app
 WORKDIR /app
 COPY /srv/gmg-app ./gmg-app
 COPY /srv/gmg-client ./gmg-client
